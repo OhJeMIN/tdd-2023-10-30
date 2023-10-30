@@ -24,8 +24,8 @@ public class Calc {
     }
 
     private static String stripOuterParentheses(String s) {
-        if(s.startsWith("(") && s.endsWith(")")){
-            return s.substring(1, s.length()-1);
+        while(s.contains("(") || s.contains(")")){
+            s = s.substring(1, s.length()-1);
         }
         return s;
     }
