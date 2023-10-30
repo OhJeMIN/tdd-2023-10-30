@@ -8,18 +8,17 @@ public class Calc {
         String sign = num[1];
         int num1 = Integer.parseInt(num[0].trim());
         int num2 = Integer.parseInt(num[2].trim());
-        switch (sign) {
+        final int rs = switch (sign) {
             case "+":
-                return num1 + num2;
+                yield  num1 + num2;
             case "-":
-                return num1 - num2;
+                yield num1 - num2;
             case "/":
-                return num1 / num2;
+                yield num1 / num2;
             default:
-                return num1 * num2;
-
-
-        }
+                yield num1 * num2;
+        };
+        return rs;
     }
 }
 
