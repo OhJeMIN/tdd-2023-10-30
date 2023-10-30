@@ -16,4 +16,11 @@ public class CalcTest {
         int rs = Calc.run("10 + 10");
         assertThat(rs).isEqualTo(20);
     }
+
+    @Test
+    @DisplayName("10 - 10 = 0")
+    void t3(){
+        int rs = Calc.run("10 - 10");
+        assertThat(rs).isEqualTo(0);
+    }
 }
