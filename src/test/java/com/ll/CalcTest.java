@@ -7,7 +7,7 @@ public class CalcTest {
     @Test
     @DisplayName("Calc에 run 메서드는 int를 리턴한다.")
     void t1(){
-        int rs = Calc.run("");
+        int rs = Calc.run("10 + 20");
     }
 
     @Test
@@ -22,5 +22,12 @@ public class CalcTest {
     void t3(){
         int rs = Calc.run("10 - 10");
         assertThat(rs).isEqualTo(0);
+    }
+
+    @Test
+    @DisplayName("10 + 20 = 30")
+    void t4(){
+        int rs = Calc.run("10 + 20");
+        assertThat(rs).isEqualTo(30);
     }
 }
